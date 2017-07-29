@@ -7,12 +7,14 @@ import com.wordnik.swagger.annotations.ApiModelProperty;
 public class ResultDTO<T> {
 
 	@ApiModelProperty(value = "错误码", required = true)
-	private int code;
+	private int code = 200;
 	@ApiModelProperty(value = "错误信息", required = false)
 	private String message = "";
 	@ApiModelProperty(value = "数据对象", required = false)
 	private T data;
 
+	private Integer total;
+	
 	public int getCode() {
 		return code;
 	}
@@ -35,6 +37,14 @@ public class ResultDTO<T> {
 
 	public void setData(T data) {
 		this.data = data;
+	}
+
+	public Integer getTotal() {
+		return total;
+	}
+
+	public void setTotal(Integer total) {
+		this.total = total;
 	}
 	
 }
