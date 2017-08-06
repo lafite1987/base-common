@@ -12,8 +12,8 @@ public class ResultDTO<T> {
 	private String message = "";
 	@ApiModelProperty(value = "数据对象", required = false)
 	private T data;
-
-	private Integer total;
+	@ApiModelProperty(value = "重定向地址，当错误码等于302时，请重定向到该地址", required = false)
+	private String redirect = "";
 	
 	public int getCode() {
 		return code;
@@ -39,12 +39,12 @@ public class ResultDTO<T> {
 		this.data = data;
 	}
 
-	public Integer getTotal() {
-		return total;
+	public String getRedirect() {
+		return redirect;
 	}
 
-	public void setTotal(Integer total) {
-		this.total = total;
+	public void setRedirect(String redirect) {
+		this.redirect = redirect;
 	}
 	
 }

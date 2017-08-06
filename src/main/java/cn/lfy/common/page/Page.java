@@ -12,7 +12,7 @@ public class Page<T> implements Serializable {
 
 	public static final int PAGE_SIZE = 20;
 	
-	private int pageSize; //每页显示记录数
+	private int pageSize = PAGE_SIZE; //每页显示记录数
 	private int totalResult;	//总记录数
 	private int currentPage;	//当前页
 	private int totalPage;//总页数
